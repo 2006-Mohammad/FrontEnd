@@ -38,8 +38,6 @@ export default function UserProfile() {
   };
 
   const handleSave = () => {
-    // call backend API to save profile changes (if needed)
-
     //Temporarily save in localStorage
     localStorage.setItem("user", JSON.stringify(user));
     setEditMode(false);
@@ -52,15 +50,17 @@ export default function UserProfile() {
 
   return (
     <div className="flex justify-center items-center h-screen bg-white">
-      <div className="bg-gray-100 rounded-lg p-8 shadow-lg w-96">
-        <h2 className="text-2xl font-bold text-center mb-6">User Profile</h2>
+      <div className="bg-gray-100 rounded-lg p-8 shadow-sm w-96 border border-gray-300">
+        <h2 className="text-2xl  text-center mb-6 text-green-600">
+          User Profile
+        </h2>
 
         {/* Profile picture */}
-        <div className="flex flex-col items-center mb-4">
+        <div className="flex flex-col items-center mb-8">
           <img
             src={user.profilePic || "https://via.placeholder.com/100"}
             alt="Profile"
-            className="w-24 h-24 rounded-full object-cover mb-2 border"
+            className="w-24 h-24 rounded-full object-cover mb-2 border border-green-600"
           />
           {editMode && (
             <input type="file" accept="image/*" onChange={handlePhotoUpload} />
@@ -105,7 +105,7 @@ export default function UserProfile() {
           <button
             type="button"
             onClick={() => setEditMode(!editMode)}
-            className="px-4 py-2 bg-blue-500 text-white rounded"
+            className="px-4 py-2 bg-green-600 text-white rounded"
           >
             {editMode ? "Cancel" : "Edit"}
           </button>
