@@ -9,25 +9,6 @@ export default function SignIn() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // ✅ Run this check only once on mount
-  // useEffect(() => {
-  //   const user = JSON.parse(localStorage.getItem("user"));
-  //   if (user) {
-  //     navigate("/dashboard", { replace: true });
-  //     return; // stop further execution if already logged in
-  //   }
-
-  //   (async () => {
-  //     try {
-  //       const res = await fetch("http://localhost:4000/api/me", {
-  //         credentials: "include",
-  //       });
-  //       const data = await res.json();
-  //       if (data.loggedIn) navigate("/dashboard", { replace: true });
-  //     } catch {}
-  //   })();
-  // }, []); // empty dependency array
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Validation
