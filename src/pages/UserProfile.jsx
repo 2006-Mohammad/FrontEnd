@@ -14,7 +14,6 @@ export default function UserProfile() {
 
   const [editMode, setEditMode] = useState(false);
 
-  // Load from localStorage when component mounts
   useEffect(() => {
     const savedUser = localStorage.getItem("user");
     if (savedUser) {
