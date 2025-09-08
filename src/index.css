@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-white; }
+
+
+@layer base {
+  body {
+    @apply font-Rubik;
+  }
+
+    nav {
+    @apply font-Roboto;
+  }
+  button{
+    @apply hover:bg-black
+  }
+}
+
+
+
+
+footer p {@apply text-brand}
+
